@@ -1,0 +1,193 @@
+Year,Crop,Region,Area (ha),Total production (t),Yield (t/ha)
+2010,Barley,Belgrade Region,7297.0,23371.0,3.2
+2010,Barley,Southern and Eastern Serbia Region,22141.0,53382.0,2.4
+2010,Barley,Sumadija and Western Serbia Region,22433.0,59115.0,2.6
+2010,Barley,Vojvodina Region,38067.0,125130.0,3.3
+2010,Corn,Belgrade Region,43090.0,259374.0,6.0
+2010,Corn,Southern and Eastern Serbia Region,180470.0,952110.0,5.3
+2010,Corn,Sumadija and Western Serbia Region,214499.0,1306929.0,6.1
+2010,Corn,Vojvodina Region,576512.0,4688778.0,8.1
+2010,Wheat,Belgrade Region,33256.0,111077.0,3.3
+2010,Wheat,Southern and Eastern Serbia Region,167801.0,492394.0,2.9
+2010,Wheat,Sumadija and Western Serbia Region,107536.0,325660.0,3.0
+2010,Wheat,Vojvodina Region,310810.0,1156398.0,3.7
+2011,Barley,Belgrade Region,7176.0,28485.0,4.0
+2011,Barley,Southern and Eastern Serbia Region,20675.0,57005.0,2.8
+2011,Barley,Sumadija and Western Serbia Region,21495.0,66872.0,3.1
+2011,Barley,Vojvodina Region,31726.0,139250.0,4.4
+2011,Corn,Belgrade Region,43319.0,223526.0,5.2
+2011,Corn,Southern and Eastern Serbia Region,177122.0,747006.0,4.2
+2011,Corn,Sumadija and Western Serbia Region,212340.0,1104490.0,5.2
+2011,Corn,Vojvodina Region,604078.0,4404542.0,7.3
+2011,Wheat,Belgrade Region,34538.0,147400.0,4.3
+2011,Wheat,Southern and Eastern Serbia Region,171413.0,581765.0,3.4
+2011,Wheat,Sumadija and Western Serbia Region,109389.0,396732.0,3.6
+2011,Wheat,Vojvodina Region,304273.0,1483291.0,4.9
+2012,Barley,Belgrade Region,6548.0,23436.0,3.6
+2012,Barley,Southern and Eastern Serbia Region,19217.0,50490.0,2.6
+2012,Barley,Sumadija and Western Serbia Region,20762.0,65326.0,3.1
+2012,Barley,Vojvodina Region,34276.0,139115.0,4.1
+2012,Corn,Belgrade Region,41754.0,114193.0,2.7
+2012,Corn,Southern and Eastern Serbia Region,164010.0,511875.0,3.1
+2012,Corn,Sumadija and Western Serbia Region,191397.0,623136.0,3.3
+2012,Corn,Vojvodina Region,578860.0,2283398.0,3.9
+2012,Wheat,Belgrade Region,32216.0,125473.0,3.9
+2012,Wheat,Southern and Eastern Serbia Region,164659.0,536265.0,3.3
+2012,Wheat,Sumadija and Western Serbia Region,108458.0,402913.0,3.7
+2012,Wheat,Vojvodina Region,297942.0,1334573.0,4.5
+2013,Barley,Belgrade Region,7170.0,29478.0,4.1
+2013,Barley,Southern and Eastern Serbia Region,19240.0,57437.0,3.0
+2013,Barley,Sumadija and Western Serbia Region,22082.0,76784.0,3.5
+2013,Barley,Vojvodina Region,42150.0,198507.0,4.7
+2013,Corn,Belgrade Region,43516.0,215452.0,5.0
+2013,Corn,Southern and Eastern Serbia Region,169683.0,700624.0,4.1
+2013,Corn,Sumadija and Western Serbia Region,201930.0,994303.0,4.9
+2013,Corn,Vojvodina Region,565204.0,3954040.0,7.0
+2013,Wheat,Belgrade Region,30140.0,126235.0,4.2
+2013,Wheat,Southern and Eastern Serbia Region,159506.0,534698.0,3.4
+2013,Wheat,Sumadija and Western Serbia Region,112078.0,412265.0,3.7
+2013,Wheat,Vojvodina Region,329916.0,1617068.0,4.9
+2014,Barley,Belgrade Region,7183.0,26310.0,3.7
+2014,Barley,Southern and Eastern Serbia Region,19274.0,51265.0,2.7
+2014,Barley,Sumadija and Western Serbia Region,22121.0,68533.0,3.1
+2014,Barley,Vojvodina Region,42225.0,177176.0,4.2
+2014,Corn,Belgrade Region,46958.0,292132.0,6.2
+2014,Corn,Southern and Eastern Serbia Region,183105.0,949978.0,5.2
+2014,Corn,Sumadija and Western Serbia Region,217902.0,1348178.0,6.2
+2014,Corn,Vojvodina Region,609911.0,5361294.0,8.8
+2014,Wheat,Belgrade Region,28857.0,112014.0,3.9
+2014,Wheat,Southern and Eastern Serbia Region,152715.0,474463.0,3.1
+2014,Wheat,Sumadija and Western Serbia Region,107306.0,365823.0,3.4
+2014,Wheat,Vojvodina Region,315870.0,1434902.0,4.5
+2015,Barley,Belgrade Region,6466.0,25322.0,3.9
+2015,Barley,Southern and Eastern Serbia Region,23088.0,68570.0,3.0
+2015,Barley,Sumadija and Western Serbia Region,29455.0,105378.0,3.6
+2015,Barley,Vojvodina Region,36975.0,162935.0,4.4
+2015,Corn,Belgrade Region,43724.0,223998.0,5.1
+2015,Corn,Southern and Eastern Serbia Region,179551.0,789384.0,4.4
+2015,Corn,Sumadija and Western Serbia Region,212553.0,1082319.0,5.1
+2015,Corn,Vojvodina Region,574399.0,3359140.0,5.8
+2015,Wheat,Belgrade Region,28934.0,110111.0,3.8
+2015,Wheat,Southern and Eastern Serbia Region,136387.0,466789.0,3.4
+2015,Wheat,Sumadija and Western Serbia Region,127769.0,401405.0,3.1
+2015,Wheat,Vojvodina Region,296832.0,1449898.0,4.9
+2016,Barley,Belgrade Region,5024.0,21357.0,4.3
+2016,Barley,Southern and Eastern Serbia Region,22636.0,83572.0,3.7
+2016,Barley,Sumadija and Western Serbia Region,28430.0,113543.0,4.0
+2016,Barley,Vojvodina Region,35440.0,177029.0,5.0
+2016,Corn,Belgrade Region,43023.0,259041.0,6.0
+2016,Corn,Southern and Eastern Serbia Region,180568.0,993387.0,5.5
+2016,Corn,Sumadija and Western Serbia Region,214671.0,1278580.0,6.0
+2016,Corn,Vojvodina Region,571835.0,4845730.0,8.5
+2016,Wheat,Belgrade Region,29136.0,126981.0,4.4
+2016,Wheat,Southern and Eastern Serbia Region,137674.0,521425.0,3.8
+2016,Wheat,Sumadija and Western Serbia Region,128257.0,460463.0,3.6
+2016,Wheat,Vojvodina Region,300051.0,1775668.0,5.9
+2017,Barley,Belgrade Region,5076.0,18240.0,3.6
+2017,Barley,Southern and Eastern Serbia Region,19918.0,52962.0,2.7
+2017,Barley,Sumadija and Western Serbia Region,25315.0,89113.0,3.5
+2017,Barley,Vojvodina Region,34378.0,145178.0,4.2
+2017,Corn,Belgrade Region,40317.0,136763.0,3.4
+2017,Corn,Southern and Eastern Serbia Region,180026.0,499430.0,2.8
+2017,Corn,Sumadija and Western Serbia Region,213721.0,736481.0,3.4
+2017,Corn,Vojvodina Region,568255.0,2645696.0,4.7
+2017,Wheat,Belgrade Region,25283.0,90766.0,3.6
+2017,Wheat,Southern and Eastern Serbia Region,129311.0,410984.0,3.2
+2017,Wheat,Sumadija and Western Serbia Region,115072.0,420163.0,3.7
+2017,Wheat,Vojvodina Region,286449.0,1353710.0,4.7
+2018,Barley,Belgrade Region,7883.0,29309.0,3.7
+2018,Barley,Southern and Eastern Serbia Region,22262.0,66130.0,3.0
+2018,Barley,Sumadija and Western Serbia Region,37139.0,142762.0,3.8
+2018,Barley,Vojvodina Region,38456.0,171937.0,4.5
+2018,Corn,Belgrade Region,32769.0,213319.0,6.5
+2018,Corn,Southern and Eastern Serbia Region,161418.0,882738.0,5.5
+2018,Corn,Sumadija and Western Serbia Region,189947.0,1211368.0,6.4
+2018,Corn,Vojvodina Region,517619.0,4657345.0,9.0
+2018,Wheat,Belgrade Region,31063.0,121304.0,3.9
+2018,Wheat,Southern and Eastern Serbia Region,152102.0,505423.0,3.3
+2018,Wheat,Sumadija and Western Serbia Region,130411.0,518732.0,4.0
+2018,Wheat,Vojvodina Region,329507.0,1796142.0,5.5
+2019,Barley,Belgrade Region,7362.0,25816.0,3.5
+2019,Barley,Southern and Eastern Serbia Region,21084.0,58848.0,2.8
+2019,Barley,Sumadija and Western Serbia Region,35922.0,133378.0,3.7
+2019,Barley,Vojvodina Region,35750.0,155298.0,4.3
+2019,Corn,Belgrade Region,37838.0,242541.0,6.4
+2019,Corn,Southern and Eastern Serbia Region,175722.0,1040401.0,5.9
+2019,Corn,Sumadija and Western Serbia Region,203505.0,1286151.0,6.3
+2019,Corn,Vojvodina Region,545018.0,4775447.0,8.8
+2019,Wheat,Belgrade Region,29513.0,112006.0,3.8
+2019,Wheat,Southern and Eastern Serbia Region,127099.0,441028.0,3.5
+2019,Wheat,Sumadija and Western Serbia Region,118458.0,452391.0,3.8
+2019,Wheat,Vojvodina Region,302429.0,1529218.0,5.1
+2020,Barley,Belgrade Region,8630.0,39439.0,4.6
+2020,Barley,Southern and Eastern Serbia Region,25082.0,103732.0,4.1
+2020,Barley,Sumadija and Western Serbia Region,29874.0,139691.0,4.7
+2020,Barley,Vojvodina Region,42732.0,207253.0,4.9
+2020,Corn,Belgrade Region,40740.0,309340.0,7.6
+2020,Corn,Southern and Eastern Serbia Region,172320.0,1215222.0,7.1
+2020,Corn,Sumadija and Western Serbia Region,213911.0,1575243.0,7.4
+2020,Corn,Vojvodina Region,569556.0,4772803.0,8.4
+2020,Wheat,Belgrade Region,27718.0,134737.0,4.9
+2020,Wheat,Southern and Eastern Serbia Region,112007.0,493221.0,4.4
+2020,Wheat,Sumadija and Western Serbia Region,124199.0,595460.0,4.8
+2020,Wheat,Vojvodina Region,317204.0,1650085.0,5.2
+2021,Barley,Belgrade Region,7483.0,41254.0,5.5
+2021,Barley,Southern and Eastern Serbia Region,22746.0,106033.0,4.7
+2021,Barley,Sumadija and Western Serbia Region,27393.0,140718.0,5.1
+2021,Barley,Vojvodina Region,40873.0,265920.0,6.5
+2021,Corn,Belgrade Region,39918.0,236235.0,5.9
+2021,Corn,Southern and Eastern Serbia Region,182247.0,924338.0,5.1
+2021,Corn,Sumadija and Western Serbia Region,223318.0,1187852.0,5.3
+2021,Corn,Vojvodina Region,574854.0,3678706.0,6.4
+2021,Wheat,Belgrade Region,29676.0,171705.0,5.8
+2021,Wheat,Southern and Eastern Serbia Region,118309.0,570747.0,4.8
+2021,Wheat,Sumadija and Western Serbia Region,120023.0,622559.0,5.2
+2021,Wheat,Vojvodina Region,330727.0,2077296.0,6.3
+2022,Barley,Belgrade Region,7402.0,34190.0,4.6
+2022,Barley,Southern and Eastern Serbia Region,23685.0,101238.0,4.3
+2022,Barley,Sumadija and Western Serbia Region,25549.0,120974.0,4.7
+2022,Barley,Vojvodina Region,37179.0,195599.0,5.3
+2022,Corn,Belgrade Region,36414.0,173404.0,4.8
+2022,Corn,Southern and Eastern Serbia Region,171984.0,768649.0,4.5
+2022,Corn,Sumadija and Western Serbia Region,200168.0,955402.0,4.8
+2022,Corn,Vojvodina Region,543650.0,2385839.0,4.4
+2022,Wheat,Belgrade Region,32174.0,160996.0,5.0
+2022,Wheat,Southern and Eastern Serbia Region,129613.0,521305.0,4.0
+2022,Wheat,Sumadija and Western Serbia Region,126369.0,584406.0,4.6
+2022,Wheat,Vojvodina Region,342930.0,1843120.0,5.4
+2023,Barley,Belgrade Region,7607.0,35674.0,4.7
+2023,Barley,Southern and Eastern Serbia Region,28771.0,128500.0,4.5
+2023,Barley,Sumadija and Western Serbia Region,31195.0,150298.0,4.8
+2023,Barley,Vojvodina Region,41266.0,223744.0,5.4
+2023,Corn,Belgrade Region,35573.0,216319.0,6.1
+2023,Corn,Southern and Eastern Serbia Region,174428.0,1071511.0,6.1
+2023,Corn,Sumadija and Western Serbia Region,205485.0,1371204.0,6.7
+2023,Corn,Vojvodina Region,507494.0,3971950.0,7.8
+2023,Wheat,Belgrade Region,34105.0,164215.0,4.8
+2023,Wheat,Southern and Eastern Serbia Region,138663.0,541618.0,3.9
+2023,Wheat,Sumadija and Western Serbia Region,134083.0,573695.0,4.3
+2023,Wheat,Vojvodina Region,375395.0,2169172.0,5.8
+2024,Barley,Belgrade Region,7038.0,34611.0,4.9
+2024,Barley,Southern and Eastern Serbia Region,25292.0,119373.0,4.7
+2024,Barley,Sumadija and Western Serbia Region,27138.0,139706.0,5.1
+2024,Barley,Vojvodina Region,38745.0,225070.0,5.8
+2024,Corn,Belgrade Region,40015.0,201996.0,5.0
+2024,Corn,Southern and Eastern Serbia Region,186293.0,453762.0,2.4
+2024,Corn,Sumadija and Western Serbia Region,224602.0,1159620.0,5.2
+2024,Corn,Vojvodina Region,536582.0,3291931.0,6.1
+2024,Wheat,Belgrade Region,29027.0,159910.0,5.5
+2024,Wheat,Southern and Eastern Serbia Region,97995.0,399595.0,4.1
+2024,Wheat,Sumadija and Western Serbia Region,94118.0,420896.0,4.5
+2024,Wheat,Vojvodina Region,327892.0,1920136.0,5.9
+2025,Barley,Belgrade Region,7138.0,35740.0,5.0
+2025,Barley,Southern and Eastern Serbia Region,25690.0,126106.0,4.9
+2025,Barley,Sumadija and Western Serbia Region,28083.0,150216.0,5.3
+2025,Barley,Vojvodina Region,37937.0,223892.0,5.9
+2025,Corn,Belgrade Region,38476.0,180796.0,4.7
+2025,Corn,Southern and Eastern Serbia Region,186754.0,398328.0,2.1
+2025,Corn,Sumadija and Western Serbia Region,223840.0,1071775.0,4.8
+2025,Corn,Vojvodina Region,526372.0,2797055.0,5.3
+2025,Wheat,Belgrade Region,32164.0,186498.0,5.8
+2025,Wheat,Southern and Eastern Serbia Region,108039.0,540077.0,5.0
+2025,Wheat,Sumadija and Western Serbia Region,104587.0,593693.0,5.7
+2025,Wheat,Vojvodina Region,362285.0,2361035.0,6.5
