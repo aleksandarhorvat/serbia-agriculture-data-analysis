@@ -69,6 +69,25 @@ requirements.txt
   wheat and barley are sown in autumn for next-year harvest, so seed purchase
   year is shifted by +1 before merging with SORS harvest-year production.
   Corn (spring sowing) is not shifted.
+- Seeding rates (used in `project.ipynb` to convert RSD/kg seed price into a
+  seed cost per hectare figure): corn 75,000 seeds/ha (= 3 sowing units,
+  converted to ~30 kg/ha using the same 400 g thousand-kernel-weight
+  assumption above); wheat 225 kg/ha; barley 190 kg/ha. These are typical,
+  representative values, not exact for every hybrid/variety/growing
+  condition. Sources:
+  - Corn seeding rate (75,000 seeds/ha = 3 sowing units/ha): Serbian
+    Ministry of Agriculture regulation on certified-seed subsidies
+    (Pravilnik o uslovima, nacinu i obrascu zahteva za ostvarivanje prava
+    na regres za sertifikovano seme):
+    https://domacinskakuca.rs/2025/05/27/objavljen-pravilnik-o-uslovima-nacinu-i-obrascu-zahteva-za-ostvarivanje-prava-na-regres-za-sertifikovano-seme/
+  - Corn seeding rate, independent cross-check (~74,000 seeds/ha average
+    across FAO 270-600 hybrids under medium growing conditions; confirms
+    "1 sowing unit = 25,000 seeds"): KWS official seeding-rate calculator:
+    https://www.kws.com/rs/sr/digitalne-usluge/mykws/potrebna-kolicina-semena/
+  - Wheat seeding rate (200-250 kg/ha): Delta Agrar: https://deltaagrar.rs/trgovina-i-distribucija/semena/seme-psenice-i-jecma/
+  - Barley seeding rate (140-235 kg/ha, winter/spring varieties):
+    - Stovet.rs: https://www.stovet.rs/ratarstvo/seme/jecam/
+    - Agroklub.rs (spring barley, 190-235 kg/ha): https://www.agroklub.rs/ratarstvo/koji-je-pravi-recept-prolecne-setve-jarih-zitarica/57639
 
 ## Language Policy
 
