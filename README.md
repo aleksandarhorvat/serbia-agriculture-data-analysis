@@ -115,9 +115,14 @@ scripts/
   clean_stips_selling_prices.py      clean raw STIPS selling prices
   clean_stips_seed_prices.py         clean downloaded seed XLS files
   clean_sors_crop_production.py      clean SORS crop production export
-  merge_dataset.py                   merge all cleaned outputs
+  merge_dataset.py                   merge all cleaned outputs (also exposes
+                                     load_selling_prices / load_seed_prices,
+                                     reused by project.ipynb)
   run_pipeline.py                    run clean_* + merge_dataset.py
-project.ipynb                        analysis notebook (reads data/dataset.csv)
+project.ipynb                        analysis notebook (reads data/dataset.csv;
+                                     for the Q4 per-city margin it also reads the
+                                     processed per-city price files via helpers
+                                     imported from scripts/)
 requirements.txt
 ```
 
@@ -153,6 +158,16 @@ requirements.txt
   Southern and Eastern Serbia Region.
   STIPS cities are mapped to these regions in `CITY_TO_REGION`
   in `merge_dataset.py`.
+- Net margin per hectare (Q4) is computed per city first, then averaged to the
+  region (equal weight per city), rather than averaging price, yield, and seed
+  cost to the region and deriving margin from those averages. Because selling
+  price and yield are correlated, deriving margin from separate averages is
+  biased; computing margin per row first avoids that. To get per-city prices the
+  notebook reuses `load_selling_prices` / `load_seed_prices` from
+  `merge_dataset.py` (same RSD/kg conversion as the pipeline) and aggregates to
+  city instead of region; yield is taken from `dataset.csv` at region level,
+  since SORS has no city breakdown. Three cities (Leskovac, Uzice, Sabac) have
+  selling prices but no seed prices, so they drop out of this margin calculation.
 - Corn seed pricing conversion (thousand kernel weight = 400 g):
   STIPS corn seed prices are listed per sowing unit (seed count), not per kg.
   Conversion to RSD/kg uses an assumed thousand-kernel weight of 400 g,

@@ -74,27 +74,20 @@ def normalize_crop(text):
     return CROP_MAP.get(str(text).strip().lower())
 
 
-def main():
-    # 1) STIPS selling prices -> Year, Region, Crop, Selling price (RSD/kg)
-    stips_selling = pd.read_csv(STIPS_SELLING_PRICES_CLEAN)
+def load_selling_prices(path):
+    """Cleaned STIPS selling prices, one row per observation; caller aggregates to region or city."""
+    stips_selling = pd.read_csv(path)
     stips_selling["Year"] = pd.to_datetime(stips_selling["date"], format="%d.%m.%Y").dt.year
     stips_selling["Crop"] = stips_selling["crop"].apply(normalize_crop)
     stips_selling["Region"] = stips_selling["city"].map(CITY_TO_REGION)
+    stips_selling = stips_selling.rename(columns={"city": "City"})
+    return stips_selling.dropna(subset=["Crop", "Region"])[["Year", "Region", "City", "Crop", "price_rsd"]]
 
-    average_selling_prices = (
-        stips_selling.dropna(subset=["Crop", "Region"])
-        .groupby(["Year", "Region", "Crop"])["price_rsd"]
-        .mean()
-        .round(2)
-        .reset_index()
-        .rename(columns={"price_rsd": "Selling price (RSD/kg)"})
-    )
 
-    # 2) STIPS seed prices -> Year, Region, Crop, Seed price (RSD/kg)
-    # Wheat and barley are sown in autumn for next-year harvest.
-    seed_prices = pd.read_csv(STIPS_SEED_PRICES_CLEAN, encoding="utf-8-sig")
+def load_seed_prices(path):
+    """Cleaned STIPS seed prices in RSD/kg, one row per observation; caller aggregates."""
+    seed_prices = pd.read_csv(path, encoding="utf-8-sig")
     seed_prices.columns = [column.strip() for column in seed_prices.columns]
-
     seed_prices["Crop"] = seed_prices["Crop"].apply(normalize_crop)
     seed_prices["Region"] = seed_prices["City"].map(CITY_TO_REGION)
 
@@ -108,10 +101,25 @@ def main():
         seed_prices["Seed price (RSD)"] / (number_of_seeds * THOUSAND_KERNEL_WEIGHT_GRAMS / 1_000_000),
         seed_prices["Seed price (RSD)"] / number_of_kilograms,
     )
+    # Wheat/barley are sown in autumn -> shift to the following (harvest) year.
     seed_prices["Year"] = np.where(seed_prices["Crop"] == "Corn", seed_prices["Year"], seed_prices["Year"] + 1)
+    return seed_prices.dropna(subset=["Crop", "Region"])[["Year", "Region", "City", "Crop", "seed_price_rsd_per_kg"]]
 
+
+def main():
+    # 1) STIPS selling prices -> Year, Region, Crop, Selling price (RSD/kg)
+    average_selling_prices = (
+        load_selling_prices(STIPS_SELLING_PRICES_CLEAN)
+        .groupby(["Year", "Region", "Crop"])["price_rsd"]
+        .mean()
+        .round(2)
+        .reset_index()
+        .rename(columns={"price_rsd": "Selling price (RSD/kg)"})
+    )
+
+    # 2) STIPS seed prices -> Year, Region, Crop, Seed price (RSD/kg)
     average_seed_prices = (
-        seed_prices.dropna(subset=["Crop", "Region"])
+        load_seed_prices(STIPS_SEED_PRICES_CLEAN)
         .groupby(["Year", "Region", "Crop"])["seed_price_rsd_per_kg"]
         .mean()
         .round(2)
