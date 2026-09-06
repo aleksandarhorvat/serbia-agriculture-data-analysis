@@ -10,14 +10,17 @@ across Serbia's 4 NUTS2-equivalent regions.
 **Method:** Selling-price-to-seed-cost ratios over time, within-year
 yield-price correlation (demeaned to strip out inflation/shock trends),
 a 5-year linear forecast per region-crop, and a net-margin-per-hectare
-ranking. Full pipeline and analysis in `project.ipynb`; see
+ranking. All per-hectare money figures are inflation-adjusted (deflated to constant
+2010 dinars using the Consumer Price Index, CPI). Full pipeline and analysis in `project.ipynb`; see
 [How it works](#how-it-works) below for reproduction steps.
 
 ## Key Findings
 
-- **Producer margins have narrowed for all three crops since 2010**, and the
+- **Producer margins have narrowed for all three crops since 2010.** The
   2023-2025 selling-to-seed price ratio is a 15-year low for wheat, barley,
-  and corn alike. This looks structural, not a temporary dip.
+  and corn alike, and the net margin per hectare (inflation-adjusted) fell by
+  roughly 7% for barley, 16% for corn, and 23% for wheat between 2010-2012 and
+  2023-2025. This looks structural, not a temporary dip.
 - **Input-cost inflation, not weak selling prices, is driving the squeeze.**
   Corn's seed price nearly tripled over the period while its market price
   only roughly doubled. Wheat and barley's seed prices roughly doubled while
@@ -102,11 +105,13 @@ data/
   raw/                               original, unchanged source data (Serbian)
     downloaded_xls/                  STIPS seed-price XLS archive
     Result-130102-300726.csv         SORS export, manually downloaded
+    cpi_raw.xls                      SORS CPI export (HTML .xls), manual download
     stips_selling_prices_raw.csv      STIPS selling prices raw export
   processed/                         cleaned intermediate outputs (English)
     stips_selling_prices_clean.csv
     stips_seed_prices_clean.csv
     sors_crop_production_clean.csv
+    cpi_clean.csv
   dataset.csv                        final merged dataset (English)
 scripts/
   paths.py                           shared paths
@@ -115,6 +120,7 @@ scripts/
   clean_stips_selling_prices.py      clean raw STIPS selling prices
   clean_stips_seed_prices.py         clean downloaded seed XLS files
   clean_sors_crop_production.py      clean SORS crop production export
+  clean_cpi.py                       clean SORS CPI export
   merge_dataset.py                   merge all cleaned outputs (also exposes
                                      load_selling_prices / load_seed_prices,
                                      reused by project.ipynb)
@@ -122,7 +128,8 @@ scripts/
 project.ipynb                        analysis notebook (reads data/dataset.csv;
                                      for the Q4 per-city margin it also reads the
                                      processed per-city price files via helpers
-                                     imported from scripts/)
+                                     imported from scripts/, and cpi_clean.csv to
+                                     deflate per-hectare margins by CPI)
 requirements.txt
 ```
 
@@ -140,7 +147,12 @@ requirements.txt
    [data.stat.gov.rs, indicator 130102](https://data.stat.gov.rs/Home/Result/130102)
    (CSV export with all years, all 4 regions, all 3 crops).
 
-3. Automatic pipeline:
+3. Download `data/raw/cpi_raw.xls` manually from:
+   [data.stat.gov.rs, indicator 03010601](https://data.stat.gov.rs/Home/Result/03010601)
+   (consumer price index, COICOP "Total", base 2006=100, Republic of Serbia,
+   all months; "Save to Excel").
+
+4. Automatic pipeline:
    open `project.ipynb` and run the first cell.
    It checks whether `data/dataset.csv` exists:
    - if it does not exist, it runs `scripts/run_pipeline.py`
@@ -168,6 +180,12 @@ requirements.txt
   city instead of region; yield is taken from `dataset.csv` at region level,
   since SORS has no city breakdown. Three cities (Leskovac, Uzice, Sabac) have
   selling prices but no seed prices, so they drop out of this margin calculation.
+- Inflation adjustment: all per-hectare money (revenue, seed cost, net margin)
+  is deflated to constant 2010 dinars using the SORS Consumer Price Index (annual
+  average, rebased to 2010 = 100), so figures are comparable across years.
+  Per-kg prices are left nominal (the actual price paid/received each year);
+  the selling/seed price ratio is invariant to deflation. CPI source:
+  data.stat.gov.rs indicator 03010601 (COICOP "Total", base 2006=100).
 - Corn seed pricing conversion (thousand kernel weight = 400 g):
   STIPS corn seed prices are listed per sowing unit (seed count), not per kg.
   Conversion to RSD/kg uses an assumed thousand-kernel weight of 400 g,

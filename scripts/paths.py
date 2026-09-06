@@ -13,6 +13,7 @@ STIPS_SELLING_PRICES_RAW = RAW_DIR / "stips_selling_prices_raw.csv"
 STIPS_SELLING_PRICES_CLEAN = PROCESSED_DIR / "stips_selling_prices_clean.csv"
 STIPS_SEED_PRICES_CLEAN = PROCESSED_DIR / "stips_seed_prices_clean.csv"
 SORS_CROP_PRODUCTION_CLEAN = PROCESSED_DIR / "sors_crop_production_clean.csv"
+CPI_CLEAN = PROCESSED_DIR / "cpi_clean.csv"
 
 DATASET_PATH = BASE_DIR / "data" / "dataset.csv"
 
